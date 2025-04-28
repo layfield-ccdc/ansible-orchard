@@ -1,19 +1,15 @@
 - name: Command Line Tools
-  hosts: workers
-  roles:
-    - { role: elliotweiser.osx-command-line-tools }
+  ansible.builtin.include_role:
+    name: elliotweiser.osx-command-line-tools
 
 - name: Install Homebrew
-  hosts: workers
-  roles:
-    - geerlingguy.mac.homebrew
+  ansible.builtin.include_role:
+    name: geerlingguy.mac.homebrew
 
-- hosts: workers
-  tasks:
-    - name: Update and upgrade Homebrew packages
-      homebrew:
-        update_homebrew: true
-        upgrade_all: true
+- name: Update and upgrade Homebrew packages
+  community.general.homebrew:
+    update_homebrew: true
+    upgrade_all: true
 
 - name: Install Orchard Worker Service
   ansible.builtin.include_tasks:

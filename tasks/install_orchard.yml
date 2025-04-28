@@ -21,7 +21,7 @@
   become: yes
 
 - name: create Orchard Worker launchd unit
-   ansible.builtin.emplate:
+   ansible.builtin.template:
     src: org.cirruslabs.orchard.worker.plist.j2
     dest: /Library/LaunchDaemons/org.cirruslabs.orchard.worker.plist
   become: yes
