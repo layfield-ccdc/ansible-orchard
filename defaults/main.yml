@@ -1,7 +1,7 @@
 orchard_worker_name: "{{ ansible_hostname }}"
 orchard_worker_binary_path: /opt/homebrew/bin/orchard
 orchard_worker_log_file_path: /tmp/orchard-worker.log
-orchard_tart_home: "{{ ansible_env.HOME }}"
+orchard_worker_tart_home: "{{ ansible_env.HOME }}"
 orchard_worker_user: ""
 orchard_worker_controller_url: ""
 orchard_worker_bootstrap_token: ""
