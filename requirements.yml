@@ -1,4 +1,5 @@
 collections:
   - geerlingguy.mac
+  - community.general
 roles:
   - elliotweiser.osx-command-line-tools

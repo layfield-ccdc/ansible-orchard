@@ -1,0 +1,16 @@
+- name: Command Line Tools
+  ansible.builtin.include_role:
+    name: elliotweiser.osx-command-line-tools
+
+- name: Install Homebrew
+  ansible.builtin.include_role:
+    name: geerlingguy.mac.homebrew
+
+- name: Update and upgrade Homebrew packages
+  community.general.homebrew:
+    update_homebrew: true
+    upgrade_all: true
+
+- name: Install Orchard Worker Service
+  ansible.builtin.include_tasks:
+    file: install_orchard.yml

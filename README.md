@@ -10,12 +10,19 @@ First, install Ansible Galaxy dependencies:
 ansible-galaxy install -r requirements.yml
 ```
 
-To install everything needed to participate the workers pool, first populate `orchard_worker_controller_url`
-and `orchard_worker_bootstrap_token` in [`production-pool`](production-pool) file. Also don't forget to list all of your
-worker hosts to setup in `hosts` field.
+## Dependencies
 
-Then run the following command:
+* elliotweiser.osx-command-line-tools
+* geerlingguy.mac
+* community.general
 
-```bash
-ansible-playbook --inventory-file production-pool --ask-pass playbook-workers.yml
-```
+## Example Playbook
+
+    - hosts: all
+      roles:
+        - ansible_orchard
+      vars:
+        orchard_worker_tart_home: "{{ ansible_env.HOME }}"
+        orchard_worker_user: "admin"
+        orchard_worker_controller_url: "controller.example.com"
+        orchard_worker_bootstrap_token: "TOKEN-HERE"
