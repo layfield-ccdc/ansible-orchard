@@ -14,6 +14,7 @@ ansible-galaxy install -r requirements.yml
 
 * elliotweiser.osx-command-line-tools
 * geerlingguy.mac
+* community.general
 
 ## Example Playbook
 
