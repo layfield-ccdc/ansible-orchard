@@ -9,7 +9,7 @@
     state: upgraded
 
 - name: install Softnet
-   community.general.homebrew:
+  community.general.homebrew:
     name: cirruslabs/cli/softnet
     state: upgraded
 
@@ -21,7 +21,7 @@
   become: yes
 
 - name: create Orchard Worker launchd unit
-   ansible.builtin.template:
+  ansible.builtin.template:
     src: org.cirruslabs.orchard.worker.plist.j2
     dest: /Library/LaunchDaemons/org.cirruslabs.orchard.worker.plist
   become: yes
