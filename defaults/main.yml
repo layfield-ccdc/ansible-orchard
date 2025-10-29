@@ -5,3 +5,5 @@ orchard_worker_tart_home: "{{ ansible_env.HOME }}"
 orchard_worker_user: ""
 orchard_worker_controller_url: ""
 orchard_worker_bootstrap_token: ""
+# Comma separated list of labels
+orchard_worker_labels: host={{ ansible_hostname }}
