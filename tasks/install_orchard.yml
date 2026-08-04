@@ -1,16 +1,16 @@
 - name: install Orchard
   community.general.homebrew:
-    name: cirruslabs/cli/orchard
+    name: openai/tools/orchard
     state: upgraded
 
 - name: install Tart
   community.general.homebrew:
-    name: cirruslabs/cli/tart
+    name: openai/tools/tart
     state: upgraded
 
 - name: install Softnet
   community.general.homebrew:
-    name: cirruslabs/cli/softnet
+    name: openai/tools/softnet
     state: upgraded
 
 - name: ensure Softnet binary has a SUID-bit set
