@@ -1,1 +1,3 @@
 orchard_worker_log_path_launchd: /tmp/orchard-worker-launchd.log
+orchard_worker_binary_path: /opt/homebrew/bin/orchard
+orchard_worker_log_file_path: /tmp/orchard-worker.log
