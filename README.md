@@ -68,3 +68,14 @@ ansible-playbook -i inventory.yml playbook.yml -e 'orchard_worker_user=admin' \
   -e 'orchard_worker_controller_url=controller.example.com' \
   -e 'orchard_worker_bootstrap_token=TOKEN-HERE'
 ```
+
+## requirements.yml
+
+To download this role from GitHub in another Ansible project, add an entry like this to your requirements file:
+
+```yml
+roles:
+  - src: git@github.com:layfield-ccdc/ansible-orchard.git
+    scm: git
+    name: ansible-orchard
+```
